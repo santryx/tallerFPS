@@ -14,6 +14,7 @@ public class FPSAim : MonoBehaviour
     float mouseX;
     float mouseY;
     public bool InvertedMouse;
+    public GameObject body;
     //public GameObject body = GameObject.Find("Player");
 
     void Update()
@@ -29,7 +30,6 @@ public class FPSAim : MonoBehaviour
 
         } 
         Debug.Log(mouseX);
-        GameObject body = GameObject.Find("Player");
         transform.eulerAngles = new Vector3(mouseY, mouseX, 0);
         body.transform.eulerAngles = new Vector3(0, mouseX, 0);
 
