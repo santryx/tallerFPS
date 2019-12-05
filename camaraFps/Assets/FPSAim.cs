@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class FPSAim : MonoBehaviour
 {
-    Vector3 rotacion;
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        Cursor.visible = false;
     }
 
     float mouseX;
     float mouseY;
     public bool InvertedMouse;
     public GameObject body;
-    //public GameObject body = GameObject.Find("Player");
 
     void Update()
     {
@@ -32,10 +30,6 @@ public class FPSAim : MonoBehaviour
         Debug.Log(mouseX);
         transform.eulerAngles = new Vector3(mouseY, mouseX, 0);
         body.transform.eulerAngles = new Vector3(0, mouseX, 0);
-
-      
-        
-       
-        
+ 
     }
 }
